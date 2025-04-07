@@ -1,0 +1,423 @@
+/* 全站預設字型與背景 */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  margin: 1%;
+  padding-top: 100px;
+}
+
+iframe {
+  width: 85%;
+  height: 500px;
+  border: none;
+  border: 2px solid #ccc; 
+  border-radius: 8px;
+}
+
+/* 導覽列整體設定 */
+.navbar {
+  background-color: #f8f9fa;
+  padding: 1rem 0;
+  /*position: fixed;*/
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 左右排版 container */
+.navbar-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1440px;
+  padding-left: 2rem;   
+  padding-right: 2rem;
+
+}
+
+/* logo 尺寸 */
+.logo {
+  height: 40px;
+}
+
+/* 導覽連結排橫向 */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* 一般連結樣式 */
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-links a:hover {
+  background-color: #eaeaea;
+}
+
+/* dropdown 外層 */
+.nav-item-dropdown {
+  position: relative;
+}
+
+.nav-item-dropdown > a {
+  padding: 0.5rem 0.75rem;
+  display: inline-block;
+}
+
+/* 下拉選單 */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-width: 160px;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.dropdown-menu a {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  display: block;
+  color: #000;
+  white-space: nowrap;
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+
+
+/* 每個主區塊：左右分兩欄 */
+.content-section {
+  display: flex;
+  padding: 6rem 2rem 3rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+/* 左欄：文字內容（40%寬） */
+.text-content {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 右欄：圖片（60%寬） */
+.image-content {
+  flex: 0 0 60%;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* 標準按鈕樣式 */
+.primary-btn {
+  display: inline-block;              /* 讓按鈕寬度跟文字走 */
+  background-color: #160b77;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.5rem;             /* 控制上下左右內距 */
+  text-decoration: none;
+  border-radius: 999px;               /* 選配：圓角按鈕 */
+  font-weight: bold;
+  font-size: 1rem;
+  white-space: nowrap;                /* 避免斷行（選配） */
+  transition: background-color 0.2s ease;
+}
+
+/* Contact 區塊樣式：灰底 + 置中排版 */
+.contact-section {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 1rem 1rem;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* 創辦人資訊橫向排列 */
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* 每位創辦人的卡片 */
+.contact-card {
+  max-width: 300px;
+}
+
+/* 照片樣式：圓角 + 固定尺寸 */
+.contact-photo {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
+
+/* 文字樣式 */
+.contact-card p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.contact-card a {
+  color: #160b77;
+  text-decoration: none;
+}
+
+/* 滾動淡入動畫 */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 響應式設定：手機版改為直排 */
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column;
+  }
+
+  .text-content, .image-content {
+    flex: 1 1 100%;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    margin: 0.5rem;
+  }
+}
+
+/* About 頁面 Section：整體灰底區塊 */
+.about-hero {
+  background-color: #6db0cb;
+  padding: 4rem 1rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+
+/* 標題：置中對齊 */
+.about-header h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+/* 內文段落：置中排版、16px 字體 */
+.about-text {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+}
+
+/* 數字 highlight 區塊：橫排＋間距 */
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* 單一卡片樣式：白底、圓角、陰影 */
+.highlight-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-card h2 {
+  color: #439dd0; /* placeholder pink 顏色，可自定 */
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.highlight-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #439dd0;
+}
+
+/* 第二個 Section：介紹創辦人 */
+.founders-section {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+/* 標題置中 */
+.section-title-center {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+/* 外框容器：左右各50%，手機版會自動直排 */
+.founders-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* 每位創辦人卡片 */
+.founder-card {
+  flex: 0 0 45%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: left;
+  margin:15px;
+  max-width: 450px;
+}
+
+/* 圓形照片 */
+.founder-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  /*8border: 3px solid #ccc;*/
+}
+
+/* 清單樣式 */
+.founder-facts {
+  list-style-type: disc;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.founder-facts li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.pitch-deck-download {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+.seller-knowledge {
+  text-align: center;
+}
+
+/* 文章卡片列表 */
+.article-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* 每篇文章卡片樣式 */
+.article-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* 文章標題 */
+.article-card h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 摘要文字 */
+.article-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Read more 連結 */
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #160b77;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* 整個區塊卡片包裝 */
+.campaign-card {
+  background-color: #fff;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* 內文置中對齊 */
+.campaign-content {
+  text-align: center;
+}
+
+/* 清單 */
+.campaign-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+}
+
+.campaign-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* 按鈕區域 */
+.campaign-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
