@@ -422,3 +422,72 @@ iframe {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+/*文章區域*/
+.article-page {
+  font-family: "Helvetica", "Noto Sans TC", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+.article-page .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.article-page header {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.article-page .post-meta {
+  color: #888;
+  font-size: 0.9em;
+}
+
+.article-page h1 {
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+
+.article-page h2 {
+  font-size: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.article-page article p {
+  margin: 1em 0;
+}
+
+.article-page a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.article-page a:hover {
+  text-decoration: underline;
+}
+
+.article-page .article-img {
+  /*width: 100%;
+  max-width: 100%;*/
+  height: 30em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.article-page footer {
+  margin-top: 40px;
+  font-size: 0.85em;
+  color: #aaa;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
