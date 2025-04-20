@@ -36,8 +36,9 @@
 
     <section class="campaign-card scroll-fade-in">
     <div class="campaign-content scroll-fade-in">
-      <h1>🌱 <strong>Own Your Data. Support the Future.</strong></h1>
-      <p><strong>OfUser</strong> aims to bring transparency and fair compensation to your personal data.<br>
+      <h1 style="text-align: center;">🌱 <strong>Own Your Data. Support the Future.</strong></h1>
+      <h2>Campaign Description</h2>
+      <p style="text-align: left;"><strong>OfUser</strong> aims to bring transparency and fair compensation to your personal data.<br>
       We're currently in the <strong>pre-seed stage</strong>, so the full experience isn’t live yet — but you can support us in two ways:</p>
 
       <ul class="campaign-list">
@@ -47,8 +48,25 @@
 
       <p>Your support helps shape a fairer data future.</p>
 
+      <span class="read-more-link" onclick="toggleReadMore(this)">Read More</span>
+      <div class="read-more-content">
+        <h2>Data Requested</h2>
+        <ul class="campaign-list">
+          <li> 
+            <p><strong>YouTube Watch History</strong></p> 
+            <p>Takeout > YouTue and YouTube Music > history > watch-history.html</p>
+          </li>
+          <li>
+            <p><strong>Netflix Watch History.</strong></p>
+            <p>netflix-report > CONTENT_INTERACTION > ViewingActivity.csv</p>
+          </li>
+        </ul>
+        <h2>Reward</h2>
+        <p>$0</p>
+      </div>
+
       <div class="campaign-buttons">
-        <a href="#" class="btn primary-btn">Share your data</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqba3qtgZaw6xFmrInsBcOaUK_oT8P3WbEguYGs438fPgZfQ/viewform?usp=header" target="_blank" class="btn primary-btn">Share your data</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSduuMHGid_5TI3uNTNOfUz4SVYgYVwe0QYJyOTMcaKFsz_Mpw/viewform?usp=header" target="_blank" class="btn primary-btn">Stay Updated</a>
       </div>
     </div>
@@ -71,6 +89,6 @@
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
