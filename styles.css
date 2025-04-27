@@ -59,7 +59,12 @@ iframe {
 }
 
 .nav-links a:hover {
-  background-color: #eaeaea;
+  background-color: #d6d6d6 ;
+}
+
+.start-now-btn:hover {
+  transform: scale(1.08);
+  transition: transform 0.3s ease;
 }
 
 /* dropdown 外層 */
@@ -241,7 +246,7 @@ iframe {
 
 /* 內文段落：置中排版、16px 字體 */
 .about-text {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto 3rem auto;
@@ -402,6 +407,14 @@ iframe {
 /* 內文置中對齊 */
 .campaign-content {
   text-align: left;
+}
+
+.campaign-content h1 {
+  font-size: 1.8em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;      
+
 }
 
 /* 內文置中對齊 */
